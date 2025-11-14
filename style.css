@@ -39,12 +39,31 @@ nav a {
 nav a:hover {
   text-decoration: underline;
 }
+
+/* 1. Aktivera Flexbox på behållaren */
+.content-columns {
+  display: flex; /* Gör det till en flexbehållare */
+  gap: 30px; /* Lägger till lite utrymme mellan kolumnerna */
+  margin: 20px 0; /* Lägger till lite marginal ovan och under */
+  padding: 0 20px; /* Lägger till lite luft på sidorna */
+}
+
+/* 2. Definiera bredden för kolumnerna */
+.column-left,
+.column-right {
+  /* Gör att båda kolumnerna tar upp lika mycket utrymme (50/50) */
+  flex: 1;
+}
 main {
   background: #fff;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   flex: 1 0 auto;
+}
+
+.om-mig {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 section {
@@ -57,9 +76,36 @@ section h2 {
   margin-bottom: 15px;
   text-align: center;
 }
+section h3 {
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+}
 section p {
   margin-bottom: 10px;
 }
+
+.profile-picture {
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+  .content-columns {
+    flex-direction: column; /* Ändra riktningen till en kolumn på små skärmar */
+  }
+}
+
+/* Justering för responsivitet om bilden blir för stor */
+@media (max-width: 768px) {
+  .profile-image-container {
+    order: -1; /* Flyttar bilden ovanför texten på mobila enheter */
+    margin-bottom: 20px; /* Lite extra utrymme under bilden */
+  }
+}
+
 footer {
   text-align: center;
   font-size: 0.9em;
