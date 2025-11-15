@@ -258,3 +258,65 @@ form button[type='submit']:hover {
 .social-link:hover {
   background-color: #e9e9e9;
 }
+
+/* Styling för Tack-sidan */
+
+.thank-you-page {
+  /* Centrera innehållet i vyn */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Se till att det syns i mitten av skärmen */
+}
+
+.success-message {
+  max-width: 500px;
+  padding: 40px;
+  background-color: #ffffff; /* Ren vit bakgrund */
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Mjuk skugga */
+  text-align: center; /* Centrera text och element */
+
+  /* Lägger till en subtil kantlinje i Elkrafts-färg */
+  border-top: 5px solid #007bff;
+}
+
+.success-lottie {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 20px auto;
+  display: block; /* Säkerställer att marginaler fungerar */
+}
+
+.success-message h1 {
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.success-message p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Stil för "Gå tillbaka till Startsidan" länk */
+.back-link {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+  background-color: #0056b3;
+}
+
+.back-link i {
+  margin-right: 8px; /* Avstånd mellan ikon och text */
+}

@@ -5,31 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tack för ditt meddelande!</title>
     <link rel="stylesheet" href="style.css" />
-    <style>
-      /* Lite enkel styling för att centrera tackmeddelandet */
-      body {
-        text-align: center;
-        padding-top: 50px;
-      }
-      .success-message {
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 30px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-      }
-    </style>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </head>
   <body>
-    <div class="success-message">
-      <h1>Tack för ditt meddelande!</h1>
-      <p>
-        Ditt meddelande har skickats framgångsrikt. Jag kommer att återkomma till dig så snart som
-        möjligt!
-      </p>
-      <p>
-        <a href="index.html">Gå tillbaka till Startsidan</a>
-      </p>
-    </div>
+    <header>
+      <div>
+        <nav>
+          <a href="index.html">Hemma</a> | <a href="CV.html">CV</a> |
+          <a href="PB.html">Personligt Brev</a> | <a href="Ellevio.html">Ellevio</a> |
+          <a href="Kontakt.html">Kontakt</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="thank-you-page">
+      <div class="success-message">
+        <lottie-player
+          src="https://lottie.host/801a24d8-b593-41a4-9988-518206d28905/U4i17r7k5M.json"
+          background="transparent"
+          speed="1"
+          class="success-lottie"
+          autoplay
+        ></lottie-player>
+
+        <h1>Meddelandet skickat!</h1>
+        <p>
+          Tack för att du tog dig tid att kontakta mig. Som blivande Elkraftsingenjör ser jag fram
+          emot alla möjligheter och svarar på ditt meddelande så snart jag kan.
+        </p>
+
+        <a href="index.html" class="back-link">
+          <i class="fas fa-arrow-left"></i> Gå tillbaka till Startsidan
+        </a>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 David Heidari. Alla rättigheter förbehållna.</p>
+    </footer>
   </body>
 </html>
