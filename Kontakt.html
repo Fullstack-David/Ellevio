@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kontakt</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header>
@@ -17,11 +24,76 @@
       </div>
     </header>
     <main>
-      <section>
-        <h2>Kontakt</h2>
-        <p>Telefon: 0765556983</p>
-        <p>E-post:davidheidari2@gmail.com</p>
-      </section>
+      <div class="content-columns">
+        <section class="column-left contact-info">
+          <h2>Kontakta Mig Direkt</h2>
+          <p>
+            Jag ser fram emot att höra från er angående praktik, sommarjobb eller bara ett samtal om
+            Elkraft. Fyll i formuläret nedan, så återkommer jag inom kort.
+          </p>
+
+          <form name="contact" method="POST" data-netlify="true">
+            <p>
+              <label
+                >Namn:<br />
+                <input type="text" name="name" required
+              /></label>
+            </p>
+            <p>
+              <label
+                >E-post:<br />
+                <input type="email" name="email" required
+              /></label>
+            </p>
+            <p>
+              <label
+                >Ämne:<br />
+                <input type="text" name="subject"
+              /></label>
+            </p>
+            <p>
+              <label
+                >Meddelande:<br />
+                <textarea name="message" required></textarea>
+              </label>
+            </p>
+            <p>
+              <button type="submit">Skicka Meddelande</button>
+            </p>
+          </form>
+        </section>
+
+        <section class="column-right social-media">
+          <h2>Mina Nätverk</h2>
+          <p>
+            Här hittar du mig online. Jag uppmuntrar dig att kontakta mig via LinkedIn eller via
+            mail.
+          </p>
+
+          <a class="direct-contact">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:davidheidari2@gmail.com">davidheidari2@gmail.com</a>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/david-heidari-dev"
+            target="_blank"
+            class="social-link"
+          >
+            <i class="fab fa-linkedin"></i>
+            LinkedIn </a
+          ><br />
+
+          <lottie-player
+            src="https://lottie.host/7905f560-c3d5-494b-9f6b-7171e06c7e3f/YxN0lF1y4t.json"
+            background="transparent"
+            speed="1"
+            style="width: 250px; height: 250px; margin: 20px auto; display: block"
+            loop
+            autoplay
+          ></lottie-player>
+        </section>
+      </div>
     </main>
     <footer>
       <p>&copy; 2025 David Heidari. Alla rättigheter förbehållna.</p>
