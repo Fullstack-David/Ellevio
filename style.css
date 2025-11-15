@@ -37,6 +37,18 @@ header {
   border-radius: 50%;
   float: left;
 }
+.logo-ellevio {
+  display: block;
+  margin: 0 auto 10px auto;
+  max-width: 150px;
+  height: auto;
+  float: left;
+  border-radius: 10px;
+}
+header a:hover img {
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1.1);
+}
 
 header div {
   overflow: hidden; /* Förhindrar att flytande element påverkar layouten */
@@ -106,18 +118,60 @@ section p {
   margin-bottom: 10px;
 }
 
-.profile-picture {
+/* .profile-picture {
   max-width: 500px;
   height: auto;
   border-radius: 8px;
   margin-top: 4rem;
+} */
+/* Grundläggande styling för din profilbild */
+.profile-picture {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%; /* Gör bilden rund */
+  object-fit: cover; /* Säkerställ att bilden täcker området om den är rund */
+  width: 250px; /* Fasta mått för att säkerställa rund form */
+  height: 250px; /* Fasta mått */
+
+  border: 3px solid transparent; /* En transparent kant för glöden */
+  display: block;
+  margin: 20px auto;
+
+  /* ----- NYTT: Animation för pulserande glöd ----- */
+  animation: glow-pulse 3s infinite alternate ease-in-out; /* Använd animationen */
 }
 
+/* Keyframes definierar animationens steg */
+@keyframes glow-pulse {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 150, 255, 0.5), 0 0 10px rgba(0, 150, 255, 0.3); /* Initial glöd (blå) */
+    border-color: rgba(0, 150, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(0, 200, 255, 0.8), 0 0 30px rgba(0, 200, 255, 0.5); /* Starkare glöd */
+    border-color: rgba(0, 200, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(0, 150, 255, 0.5), 0 0 10px rgba(0, 150, 255, 0.3); /* Tillbaka till initial */
+    border-color: rgba(0, 150, 255, 0.5);
+  }
+}
+
+/* Din container kan fortfarande vara som den är för centrering */
+.column-right-anime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
 @media (max-width: 768px) {
   .content-columns {
     flex-direction: column; /* Ändra riktningen till en kolumn på små skärmar */
   }
   .logo {
+    display: none;
+  }
+  .logo-ellevio {
     display: none;
   }
   nav {
