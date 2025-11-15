@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hemma</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script
       src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js"
       type="module"
@@ -12,77 +19,81 @@
   </head>
   <body>
     <header>
-      <img class="logo" src="./images/logo.png" alt="logo" />
-      <div>
-        <nav>
-          <a href="index.html">Hemma</a> | <a href="CV.html">CV</a> |
-          <a href="PB.html">Personligt Brev</a> | <a href="Ellevio.html">Ellevio</a> |
-          <a href="Kontakt.html">Kontakt</a>
-        </nav>
-      </div>
+      <a href="index.html" class="logo-link">
+        <img class="logo" src="./images/logo.png" alt="Din personliga logotyp" />
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav id="main-nav">
+        <a href="index.html">Hemma</a> | <a href="CV.html">CV</a> |
+        <a href="PB.html">Personligt Brev</a> | <a href="Ellevio.html">Ellevio</a> |
+        <a href="Kontakt.html">Kontakt</a>
+      </nav>
     </header>
     <main>
-      <main>
-        <div class="content-columns">
-          <section class="column-left">
-            <h2>Om mig</h2>
-            <p class="om-mig">
-              Hej! Jag heter David Heidari, och jag är en
-              <strong>engagerad och driven</strong> blivande Elkraftsingenjör. Jag har alltid
-              funderat på vad jag vill bli när jag blir stor, och jag tror att jag har hittat det
-              till slut – självklart är det Elen jag vill jobba med! Jag är fascinerad av att förstå
-              eldistributionen från start till slut och hur vi kan optimera den.
-            </p>
-            <p class="om-mig">
-              Min drivkraft ligger i <strong>kontinuerlig utveckling</strong>, inte bara i
-              yrkesrollen utan även på det privata planet. Jag söker alltid möjligheter att lära mig
-              nytt, samtidigt som jag aktivt vill bidra med mina kunskaper till min omgivning. Min
-              erfarenhet inom teknik ger mig en bred grund att stå på när jag nu djupdyker i
-              Elkraftens värld.
-            </p>
-            <div class="column-right-anime">
-              <dotlottie-wc
-                src="https://lottie.host/12313b5f-6265-496c-9082-4128eb455eab/m1FUkwKJm5.lottie"
-                style="width: 300px; height: 300px"
-                autoplay
-                loop
-              ></dotlottie-wc>
-            </div>
-          </section>
+      <div class="content-columns">
+        <section class="column-left">
+          <h2>Om mig</h2>
+          <p class="om-mig">
+            Hej! Jag heter David Heidari, och jag är en
+            <strong>engagerad och driven</strong> blivande Elkraftsingenjör. Jag har alltid funderat
+            på vad jag vill bli när jag blir stor, och jag tror att jag har hittat det till slut –
+            självklart är det Elen jag vill jobba med! Jag är fascinerad av att förstå
+            eldistributionen från start till slut och hur vi kan optimera den.
+          </p>
+          <p class="om-mig">
+            Min drivkraft ligger i <strong>kontinuerlig utveckling</strong>, inte bara i yrkesrollen
+            utan även på det privata planet. Jag söker alltid möjligheter att lära mig nytt,
+            samtidigt som jag aktivt vill bidra med mina kunskaper till min omgivning. Min
+            erfarenhet inom teknik ger mig en bred grund att stå på när jag nu djupdyker i
+            Elkraftens värld.
+          </p>
+          <div class="column-right-anime">
+            <dotlottie-wc
+              src="https://lottie.host/12313b5f-6265-496c-9082-4128eb455eab/m1FUkwKJm5.lottie"
+              style="width: 300px; height: 300px"
+              autoplay
+              loop
+            ></dotlottie-wc>
+          </div>
+        </section>
 
-          <section class="column-right">
-            <h2>Hobbys & Språkkunskaper</h2>
-            <h3>Hobbys</h3>
-            <ul>
-              <li>Sambo</li>
-              <li>Vandring</li>
-              <li>Matlagning</li>
-              <li>Styrketräning</li>
-              <li>BRF styrelseledamot</li>
-              <li>Programmering (förstås!)</li>
-            </ul>
+        <section class="column-right">
+          <h2>Hobbys & Språkkunskaper</h2>
+          <h3>Hobbys</h3>
+          <ul>
+            <li>Sambo</li>
+            <li>Vandring</li>
+            <li>Matlagning</li>
+            <li>Styrketräning</li>
+            <li>BRF styrelseledamot</li>
+            <li>Programmering (förstås!)</li>
+          </ul>
 
-            <h3>Språkkunskaper</h3>
-            <ul>
-              <li>Svenska (Flytande)</li>
-              <li>Engelska (Flytande)</li>
-              <li>Dari (Mådersmål)</li>
-              <li>Persiska (Flytande)</li>
-            </ul>
-            <div class="column-right-anime">
-              <dotlottie-wc
-                src="https://lottie.host/e7f2d1a6-cb09-4927-b80a-4adecc23b292/K3UvFpPYVO.lottie"
-                style="width: 300px; height: 300px"
-                autoplay
-                loop
-              ></dotlottie-wc>
-            </div>
-          </section>
-        </div>
-      </main>
+          <h3>Språkkunskaper</h3>
+          <ul>
+            <li>Svenska (Flytande)</li>
+            <li>Engelska (Flytande)</li>
+            <li>Dari (Mådersmål)</li>
+            <li>Persiska (Flytande)</li>
+          </ul>
+          <div class="column-right-anime">
+            <dotlottie-wc
+              src="https://lottie.host/e7f2d1a6-cb09-4927-b80a-4adecc23b292/K3UvFpPYVO.lottie"
+              style="width: 300px; height: 300px"
+              autoplay
+              loop
+            ></dotlottie-wc>
+          </div>
+        </section>
+      </div>
     </main>
     <footer>
       <p>&copy; 2025 David Heidari. Alla rättigheter förbehållna.</p>
     </footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>

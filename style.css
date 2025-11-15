@@ -58,6 +58,9 @@ nav {
   margin-bottom: 20px;
   text-align: center;
 }
+.menu-toggle {
+  display: none;
+}
 nav a {
   margin: 0 15px;
   text-decoration: none;
@@ -157,26 +160,74 @@ section p {
   align-items: center;
   padding: 20px;
 }
+/* Media Query för Mobil (under 768px) */
 @media (max-width: 768px) {
-  .content-columns {
-    flex-direction: column; /* Ändra riktningen till en kolumn på små skärmar */
-  }
-  .logo {
-    display: none;
-  }
-  .logo-ellevio {
-    display: none;
-  }
-  nav {
-    font-size: 0.9em; /* Minska textstorleken på navigationslänkarna */
-  }
-}
+  /* ------------------- HEADER & NAVIGERING ------------------- */
 
-/* Justering för responsivitet om bilden blir för stor */
-@media (max-width: 768px) {
+  header {
+    /* Nödvändigt för att justera hamburgaren och loggan */
+    display: flex;
+    justify-content: space-between; /* Skicka element till sidorna */
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  /* Döljer den normala, utspridda navbaren på mobilen */
+  nav {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 60px; /* Flytta ner under headern */
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    z-index: 10;
+    margin-bottom: 0; /* Ta bort onödig marginal */
+    text-align: left; /* Justera text i menyn */
+  }
+
+  /* Gör länkarna till block-element i mobilmenyn */
+  nav a {
+    display: block;
+    padding: 10px 20px;
+    border-bottom: 1px solid #eee;
+    margin: 0; /* Ta bort horisontella marginaler */
+  }
+
+  /* VISA HAMBURGAR-KNAPPEN */
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #333;
+    padding: 10px;
+    /* Se till att den inte har någon inre marginal från någon annanstans */
+  }
+
+  /* JS-Klass för att visa menyn */
+  nav.is-open {
+    display: block;
+  }
+
+  /* ------------------- Övriga mobiljusteringar ------------------- */
+
+  /* Logotyperna är troligen dolda i din HTML i mobilvyn, men om de fanns,
+       måste du justera var du döljer dem baserat på din HTML.
+       I den nya header-strukturen kan du dölja din personliga logga om du vill spara plats: */
+  .logo {
+    max-width: 40px; /* Förminska loggan istället för att dölja den */
+  }
+
+  .content-columns {
+    flex-direction: column; /* Stapla kolumnerna */
+  }
+
   .profile-image-container {
-    order: -1; /* Flyttar bilden ovanför texten på mobila enheter */
-    margin-bottom: 20px; /* Lite extra utrymme under bilden */
+    order: -1;
+    margin-bottom: 20px;
   }
 }
 

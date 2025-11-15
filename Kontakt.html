@@ -15,13 +15,18 @@
   </head>
   <body>
     <header>
-      <div>
-        <nav>
-          <a href="index.html">Hemma</a> | <a href="CV.html">CV</a> |
-          <a href="PB.html">Personligt Brev</a> | <a href="Ellevio.html">Ellevio</a> |
-          <a href="Kontakt.html">Kontakt</a>
-        </nav>
-      </div>
+      <a href="index.html" class="logo-link">
+        <img class="logo" src="./images/logo.png" alt="Din personliga logotyp" />
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav id="main-nav">
+        <a href="index.html">Hemma</a> | <a href="CV.html">CV</a> |
+        <a href="PB.html">Personligt Brev</a> | <a href="Ellevio.html">Ellevio</a> |
+        <a href="Kontakt.html">Kontakt</a>
+      </nav>
     </header>
     <main>
       <div class="content-columns">
@@ -95,5 +100,6 @@
     <footer>
       <p>&copy; 2025 David Heidari. Alla rättigheter förbehållna.</p>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
