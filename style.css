@@ -20,11 +20,27 @@ body {
 
 header {
   margin-bottom: 20px;
+  padding: 20px;
+  text-align: left;
 }
-header h1 {
+/* header h1 {
   font-size: 2.5em;
   margin-bottom: 10px;
   text-align: center;
+} */
+
+.logo {
+  display: block;
+  margin: 0 auto 10px auto;
+  max-width: 150px;
+  height: auto;
+  border-radius: 50%;
+  float: left;
+}
+
+header div {
+  overflow: hidden; /* Förhindrar att flytande element påverkar layouten */
+  /* clear: both; */
 }
 
 nav {
@@ -100,6 +116,12 @@ section p {
 @media (max-width: 768px) {
   .content-columns {
     flex-direction: column; /* Ändra riktningen till en kolumn på små skärmar */
+  }
+  .logo {
+    display: none;
+  }
+  nav {
+    font-size: 0.9em; /* Minska textstorleken på navigationslänkarna */
   }
 }
 
