@@ -54,6 +54,11 @@ nav a:hover {
   /* Gör att båda kolumnerna tar upp lika mycket utrymme (50/50) */
   flex: 1;
 }
+.column-right-anime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 main {
   background: #fff;
   padding: 20px;
