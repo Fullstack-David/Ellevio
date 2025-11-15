@@ -320,3 +320,22 @@ form button[type='submit']:hover {
 .back-link i {
   margin-right: 8px; /* Avstånd mellan ikon och text */
 }
+
+/* Lägg till detta i din style.css */
+.email-link {
+  display: inline-flex; /* Använd flexbox för att justera ikon och text */
+  align-items: center;
+  text-decoration: none; /* Ta bort understrykning */
+  color: #333; /* Välj en tydlig färg */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.email-link:hover {
+  color: #007bff; /* Ändra färg vid hovring */
+}
+
+.email-link i {
+  font-size: 1.2em;
+  margin-right: 10px; /* Separera ikon från text */
+}
