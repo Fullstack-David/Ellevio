@@ -36,7 +36,7 @@ ul {
   border-radius: 50%;
   float: left;
 }
-.logo-ellevio {
+.logo-link.ellevio img {
   display: block;
   margin: 0 auto 10px auto;
   max-width: 150px;
@@ -72,9 +72,9 @@ nav a:hover {
 
 /* 1. Aktivera Flexbox på behållaren */
 .content-columns {
-  display: flex; /* Gör det till en flexbehållare */
-  gap: 30px; /* Lägger till lite utrymme mellan kolumnerna */
-  margin: 20px 0; /* Lägger till lite marginal ovan och under */
+  display: flex;
+  gap: 30px;
+  margin: 20px 0;
   /* padding: 0 20px;  */
 }
 
@@ -124,15 +124,13 @@ section p {
 .profile-picture {
   max-width: 100%;
   height: auto;
-  border-radius: 50%; /* Gör bilden rund */
+  border-radius: 50%;
   object-fit: cover; /* Säkerställ att bilden täcker området om den är rund */
-  width: 250px; /* Fasta mått för att säkerställa rund form */
-  height: 250px; /* Fasta mått */
-
+  width: 250px;
+  height: 250px;
   border: 3px solid transparent; /* En transparent kant för glöden */
   display: block;
   margin: 20px auto;
-
   /* ----- NYTT: Animation för pulserande glöd ----- */
   animation: glow-pulse 3s infinite alternate ease-in-out; /* Använd animationen */
 }
@@ -218,7 +216,10 @@ section p {
        måste du justera var du döljer dem baserat på din HTML.
        I den nya header-strukturen kan du dölja din personliga logga om du vill spara plats: */
   .logo {
-    max-width: 40px; /* Förminska loggan istället för att dölja den */
+    max-width: 50px; /* Förminska loggan istället för att dölja den */
+  }
+  .logo-link.ellevio img {
+    max-width: 50px; /* Förminska loggan istället för att dölja den */
   }
 
   .content-columns {
