@@ -19,10 +19,19 @@ body {
 }
 
 header {
-  margin-bottom: 20px;
-  padding: 20px;
-  text-align: left;
+  /* ... dina befintliga bakgrundsstilar ... */
+  background-image: url('./images/elkraft.png');
+  background-size: cover;
+  background-position: center;
+  /* NYCKEL FÖR HÖJDEN: */
+  min-height: 150px; /* Sätt en minsta höjd, t.ex. 150 pixlar. */
+  color: #fff;
+  padding: 10px 0; /* Lägg till lite vertikal utfyllnad för bättre utseende */
+  display: flex; /* Bra för att centrera innehållet vertikalt */
+  align-items: center; /* Centrerar innehållet vertikalt (logotyp, meny) */
+  justify-content: center;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -30,7 +39,7 @@ ul {
 
 .logo {
   display: block;
-  margin: 0 auto 10px auto;
+  /* margin: 0 auto 10px auto; */
   max-width: 150px;
   height: auto;
   border-radius: 50%;
@@ -64,7 +73,7 @@ nav {
 nav a {
   margin: 0 15px;
   text-decoration: none;
-  color: #333;
+  color: white;
 }
 nav a:hover {
   text-decoration: underline;
@@ -158,6 +167,11 @@ section p {
   align-items: center;
   padding: 20px;
 }
+/* HÖGST UPP (eller utanför Media Query) */
+.close-menu-toggle {
+  display: none; /* Döljer knappen som standard på ALLA skärmar */
+}
+
 /* Media Query för Mobil (under 768px) */
 @media (max-width: 768px) {
   /* ------------------- HEADER & NAVIGERING ------------------- */
@@ -165,7 +179,7 @@ section p {
   header {
     /* Nödvändigt för att justera hamburgaren och loggan */
     display: flex;
-    justify-content: space-between; /* Skicka element till sidorna */
+    justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
   }
@@ -187,10 +201,11 @@ section p {
 
   /* Gör länkarna till block-element i mobilmenyn */
   nav a {
-    display: block;
+    display: flex;
     padding: 10px 20px;
     border-bottom: 1px solid #eee;
     margin: 0; /* Ta bort horisontella marginaler */
+    color: #333;
   }
 
   /* VISA HAMBURGAR-KNAPPEN */
@@ -212,9 +227,6 @@ section p {
 
   /* ------------------- Övriga mobiljusteringar ------------------- */
 
-  /* Logotyperna är troligen dolda i din HTML i mobilvyn, men om de fanns,
-       måste du justera var du döljer dem baserat på din HTML.
-       I den nya header-strukturen kan du dölja din personliga logga om du vill spara plats: */
   .logo {
     max-width: 50px; /* Förminska loggan istället för att dölja den */
   }
@@ -229,6 +241,63 @@ section p {
   .profile-image-container {
     order: -1;
     margin-bottom: 20px;
+  }
+
+  /* Grundläggande stil för din sidomeny */
+  #main-nav {
+    /* Dessa stilar kan variera beroende på hur du visar/gömmer menyn */
+    position: fixed; /* Eller 'absolute' beroende på hur den öppnas */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Justerar länkarna till vänster, som på din bild */
+    padding-left: 20px;
+    /* Dölj menyn som standard */
+    transform: translateX(-100%); /* Döljer den utanför skärmen */
+    transition: transform 0.3s ease-out; /* Mjuk animering */
+    z-index: 1000; /* Se till att den ligger över annat innehåll */
+  }
+
+  /* När menyn är öppen */
+  #main-nav.active {
+    /* Antag att du lägger till en klass 'active' med JS */
+    transform: translateX(0); /* Visa menyn */
+  }
+
+  /* Stilen för dina länkar i menyn */
+  #main-nav a {
+    display: block;
+    padding: 15px 0;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #333;
+    width: 100%;
+    /* Andra stilar du har för dina länkar */
+  }
+
+  /* Stängningsknappen */
+  .close-menu-toggle {
+    display: block;
+    position: absolute; /* Placera knappen relativt till #main-nav */
+    top: 20px;
+    right: 30px;
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #333;
+    z-index: 1001; /* Se till att den ligger över allt annat */
+  }
+
+  /* Dölj "hamburger"-ikonen när mobilmenyn är öppen (om du vill) */
+  .menu-toggle.active {
+    /* Om du lägger till en 'active' klass på hamburgaren */
+    display: none;
   }
 }
 
