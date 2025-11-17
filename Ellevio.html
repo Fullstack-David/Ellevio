@@ -12,6 +12,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script
+      src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js"
+      type="module"
+    ></script>
   </head>
   <body>
     <header>
@@ -26,7 +30,6 @@
       <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
         <i class="fas fa-bars"></i>
       </button>
-
       <nav id="main-nav">
         <button class="close-menu-toggle" aria-label="Stäng meny">
           <i class="fas fa-times"></i>
@@ -37,10 +40,25 @@
       </nav>
     </header>
     <main>
-      <section>
-        <h2>Där innovation möter samhällsnytta</h2>
-        <p>Här kommer information om Ellevio.</p>
-      </section>
+      <div class="content-columns">
+        <section class="column-left">
+          <h2>Där innovation möter samhällsnytta</h2>
+          <p>
+            Ellevio är ett av Sveriges största elnätsföretag och ansvarar för att leverera el till
+            över 970 000 kunder i hela landet. Företaget har ett starkt fokus på hållbarhet och
+            innovation, och arbetar aktivt med att utveckla smarta elnätslösningar för att möta
+            framtidens energibehov.
+          </p>
+        </section>
+        <section class="column-right-anime">
+          <dotlottie-wc
+            src="https://lottie.host/1230118b-b854-4a82-aacd-b610875a1685/cqkhzigJ6U.lottie"
+            style="width: 400px; height: 400px"
+            autoplay
+            loop
+          ></dotlottie-wc>
+        </section>
+      </div>
     </main>
     <footer>
       <p>&copy; 2025 David Heidari. Alla rättigheter förbehållna.</p>

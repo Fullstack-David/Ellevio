@@ -82,7 +82,7 @@ nav a:hover {
 /* 1. Aktivera Flexbox på behållaren */
 .content-columns {
   display: flex;
-  gap: 30px;
+  /* gap: 30px; */
   margin: 20px 0;
   /* padding: 0 20px;  */
 }
