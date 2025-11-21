@@ -1,5 +1,7 @@
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,
@@ -40,8 +42,8 @@ ul {
 
 .logo {
   display: block;
-  /* margin: 0 auto 10px auto; */
-  max-width: 150px;
+   margin: 0 auto; 
+  max-width: 100px;
   height: auto;
   border-radius: 50%;
 }
@@ -78,6 +80,63 @@ nav a {
 nav a:hover {
   text-decoration: underline;
 }
+
+/* ---------------------------------------------  */
+/* Rullande Kort-slider CSS */
+/* 1. Behållaren som döljer det som rullar utanför */
+.card-slider-container {
+    overflow: hidden; /* Döljer element utanför behållaren */
+    width: 100%;
+    margin: 40px 0; /* Marginal för att separera från annat innehåll */
+    white-space: nowrap; /* Förhindrar att bilderna radbryts */
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 10px 0;
+}
+
+/* 2. Spåret som innehåller alla kort */
+.image-slider-track {
+    display: inline-block; 
+    transition: transform 0.3s ease-out;
+    /* Animationen är nyckeln till rullningen */
+    animation: scroll-left 50s linear infinite; /* 30s = hastighet, justera vid behov */
+}
+
+/* 3. Styla varje bild som ett "kort" */
+.image-card {
+    width: 200px; /* Bredd på kortet */
+    height: 150px; /* Höjd på kortet */
+    object-fit: cover; /* Ser till att bilden fyller ytan utan att sträckas ut */
+    margin: 0 15px; /* Avstånd mellan korten */
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* För mjuk hovring */
+    cursor: pointer;
+    display: inline-block; /* Viktigt för rullande spår */
+}
+
+/* 4. Hovringseffekten: Skala upp och lägg till en snyggare skugga */
+.image-card:hover {
+    transform: scale(1.1); /* Gör kortet 10% större vid hovring */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 5. Animationen som gör att spåret rullar (flyttas till vänster) */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0); /* Börjar vid position 0 */
+    }
+    100% {
+        /* Flytta spåret hälften av bilderna till vänster (därav dupliceringen i HTML) */
+        transform: translateX(-50%); 
+    }
+}
+
+/* 6. Pausa rullningen vid hovring på behållaren */
+.card-slider-container:hover .image-slider-track { 
+     animation-play-state: paused; 
+}
+/* ---------------------------------------------  */
 
 /* 1. Aktivera Flexbox på behållaren */
 .content-columns {
@@ -127,6 +186,20 @@ section h3 {
 }
 section p {
   margin-bottom: 10px;
+}
+
+/* Position images so each sits over its own section */
+.section {
+  position: relative;
+}
+.section .section-image {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  pointer-events: none;
+  width: auto;
+  max-width: 200px;
+  z-index: 20;
 }
 
 /* Grundläggande styling för din profilbild */
@@ -323,6 +396,7 @@ form button[type='submit']:hover {
 .email-link i {
   font-size: 1.2em;
   margin-right: 10px; /* Separera ikon från text */
+
 }
 
 /* Media Query för Mobil (under 768px) */
@@ -452,5 +526,5 @@ form button[type='submit']:hover {
   .menu-toggle.active {
     /* Om du lägger till en 'active' klass på hamburgaren */
     display: none;
-  }
+  } 
 }
