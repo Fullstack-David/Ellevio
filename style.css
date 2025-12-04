@@ -309,7 +309,7 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: center; /* Centrera ikoner och länk */
-    gap: 20px; /* Avstånd mellan länk och knapp */
+    gap: 30px; /* Avstånd mellan länk och knapp */
     margin-bottom: 10px; /* Mellanslag mellan ikonraden och copyright-texten */
 }
 
@@ -319,13 +319,12 @@ footer {
     align-items: center;
     color: var(--text-color); 
     text-decoration: none;
-    padding: 5px;
-    font-size: 1.5em;
+    font-size: 2em;
     transition: color 0.3s;
 }
 
 .footer-content-row .social-link:hover {
-    color: var(--link-color);
+    color: var(--link-color); 
 }
 
 /* Styling för kontaktformuläret */
@@ -370,8 +369,6 @@ form button[type='submit']:hover {
 /* Styling för sociala länkar */
 .social-link {
   display: block;
-  margin: 10px 0;
-  padding: 10px;
   text-decoration: none;
   color: var(--link-color-light);
 }
@@ -402,12 +399,14 @@ form button[type='submit']:hover {
   transition: color 0.3s;
 }
 
-
+/*
 
 .social-link:hover {
   background-color: var(--main-bg);
   border-radius: 5px;
 }
+
+*/ 
 
 /* Styling för Tack-sidan */
 
@@ -509,29 +508,45 @@ form button[type='submit']:hover {
   align-items: center;
 }
 
-.ellevio-button {
-  position: fixed;
-  bottom: 100px;
-  right: 30px;
+/* Stil för Vattenfall-knappen */
+.vattenfall-button {
   background-color: #28a745;
   color: white;
   border: none;
-  border-radius: 8px;
-  padding: 10px 15px;
-  font-size: 1em;
+  border-radius: 10px;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+
+ 
 } 
+
+.social-link-vattenfall {
+    display: flex; 
+    align-items: center;
+    color: white; 
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.social-link-vattenfall:hover {
+    color: #d4edda; /* Ljusare grön vid hovring */
+}
+
 
 /* Ny stil för att göra knappen till en diskret ikon */
 #theme-toggle {    
     background-color: transparent !important;
     background: none; 
-    border: none;
+    border: 1px solid transparent;
     color: var(--text-color); 
-    font-size: 1.5em; 
-    padding: 5px;
+    font-size: 2em; 
     cursor: pointer;
     box-shadow: none; 
     margin: 0;
