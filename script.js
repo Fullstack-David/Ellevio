@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const mainNav = document.getElementById('main-nav')
   const backToTopButton = document.getElementById('back-to-top')
   const currentUrl = window.location.hostname
-  const nameElement = document.getElementById('company-name')
+  const nameElement = document.querySelectorAll('.company-name')
 
   // 1. Bestäm vilket namn som ska användas
   let companyName = 'vår samarbetspartner' // standardvärde
