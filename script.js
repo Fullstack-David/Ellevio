@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (currentUrl.includes('vattenfall')) {
     nameElement.textContent = 'Vattenfall Services Nordic AB'
-  } else if (currentUrl.includes('Rejlers')) {
+  } else if (currentUrl.includes('rejlers')) {
     nameElement.textContent = 'Rejlers'
   } else {
     nameElement.textContent = 'vår samarbetspartner'
