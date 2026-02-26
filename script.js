@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const nameElement = document.getElementById('company-name')
 
   // 1. Bestäm vilket namn som ska användas
-  //let companyName = 'vår samarbetspartner' // standardvärde
+  let companyName = 'vår samarbetspartner' // standardvärde
 
   if (currentUrl.includes('vattenfall')) {
     nameElement.textContent = 'Vattenfall Services Nordic AB'
