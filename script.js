@@ -11,35 +11,38 @@ document.addEventListener('DOMContentLoaded', () => {
   let companyName = 'vår samarbetspartner' // standardvärde
   let companyUrl = 'https://www.google.se' // standardvärde
   let companyIcon = 'fas fa-link' // standardikon
+  let companyLogo = './images/default-logo.png' // standardlogo 
 
+// 2. Logik för att välja rätt data baserat på URL
   if (currentUrl.includes('vattenfall')) {
     companyName = 'Vattenfall Services Nordic AB'
     companyUrl = 'https://www.vattenfall.se/'
     companyIcon = 'fas fa-water'
+    companyLogo = './images/vattenfall-logo.png'
   } else if (currentUrl.includes('rejlers')) {
     companyName = 'Rejlers'
     companyUrl = 'https://www.rejlers.com/'
     companyIcon = 'fas fa-rocket'
+    companyLogo = './images/rejlers-logo.png'
   } 
 
-  // 2. Hitta ALLA element med klassen "company-name"
+  // 3. Uppdatera alla text-element (Namnet i brevet)
   const nameElements = document.querySelectorAll('.company-name')
   // 3. Loopa igenom dem och byt ut texten i varje
   nameElements.forEach(el => el.textContent = companyName)
 
-
-  // Uppdatera länken och ikonen i footern
+  //4. Uppdatera länken och ikonen i footern
   const linkElement = document.querySelector('.dynamic-link')
   if (linkElement) {
-    linkElement.hrfef = companyUrl
+    linkElement.href = companyUrl
   }
 
-  const iconElement = document.querySelector('.dynamic-icon')
-  if (iconElement) {
-    iconElement.className = companyIcon // Uppdatera ikonklassen
+  // Uppdatera ikonen i footern
+  const logoImg = document.querySelector('.dynamic-logo-img')
+  if (logoImg) {
+    logoImg.src = companyLogo
+    logoImg.alt = `${companyName} Logo`
   }
-
-
 
   // Initialisera temainställningar
   const themeToggle = document.getElementById('theme-toggle')
