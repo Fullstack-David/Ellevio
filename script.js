@@ -6,13 +6,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const currentUrl = window.location.hostname
   const nameElement = document.getElementById('company-name')
 
+  // 1. Bestäm vilket namn som ska användas
+  let companyName = 'vår samarbetspartner' // standardvärde
+
   if (currentUrl.includes('vattenfall')) {
     nameElement.textContent = 'Vattenfall Services Nordic AB'
   } else if (currentUrl.includes('rejlers')) {
     nameElement.textContent = 'Rejlers'
-  } else {
-    nameElement.textContent = 'vår samarbetspartner'
-  }
+  } 
+
+  // 2. Hitta ALLA element med klassen "company-name"
+  const nameElements = document.querySelectorAll('.company-name')
+  // 3. Loopa igenom dem och byt ut texten i varje
+  nameElements.forEach(el => el.textContent = companyName)
+
 
   // Initialisera temainställningar
   const themeToggle = document.getElementById('theme-toggle')
