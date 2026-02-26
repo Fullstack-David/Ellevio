@@ -3,6 +3,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeMenuToggle = document.querySelector('.close-menu-toggle') // Vår nya knapp
   const mainNav = document.getElementById('main-nav')
   const backToTopButton = document.getElementById('back-to-top')
+  const currentUrl = window.location.hostname
+  const nameElement = document.getElementById('company-name')
+
+  if (currentUrl.includes('vattenfall')) {
+    nameElement.textContent = 'Vattenfall Services Nordic AB'
+  } else if (currentUrl.includes('Rejlers')) {
+    nameElement.textContent = 'Rejlers'
+  } else {
+    nameElement.textContent = 'vår samarbetspartner'
+  }
 
   // Initialisera temainställningar
   const themeToggle = document.getElementById('theme-toggle')
