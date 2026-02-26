@@ -400,7 +400,7 @@ form button[type='submit']:hover {
 }
 
 .dynamic-logo-img {
-  width: 50px; /* Eller den storlek som passar din knapp */
+  width: 60px; /* Eller den storlek som passar din knapp */
   height: auto;
   vertical-align: middle;
 }
