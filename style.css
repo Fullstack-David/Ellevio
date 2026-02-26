@@ -399,6 +399,12 @@ form button[type='submit']:hover {
   transition: color 0.3s;
 }
 
+.dynamic-logo-img {
+  width: 30px; /* Eller den storlek som passar din knapp */
+  height: auto;
+  vertical-align: middle;
+}
+
 /*
 
 .social-link:hover {
