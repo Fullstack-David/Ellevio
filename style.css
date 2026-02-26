@@ -403,6 +403,7 @@ form button[type='submit']:hover {
   width: 60px; /* Eller den storlek som passar din knapp */
   height: auto;
   vertical-align: middle;
+  border: none;
 }
 
 /*
