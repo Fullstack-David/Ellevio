@@ -3,21 +3,42 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeMenuToggle = document.querySelector('.close-menu-toggle') // Vår nya knapp
   const mainNav = document.getElementById('main-nav')
   const backToTopButton = document.getElementById('back-to-top')
+
+  
   
   const currentUrl = window.location.hostname
   // 1. Bestäm vilket namn som ska användas
   let companyName = 'vår samarbetspartner' // standardvärde
+  let companyUrl = 'https://www.google.se' // standardvärde
+  let companyIcon = 'fas fa-link' // standardikon
 
   if (currentUrl.includes('vattenfall')) {
     companyName = 'Vattenfall Services Nordic AB'
+    companyUrl = 'https://www.vattenfall.se/'
+    companyIcon = 'fas fa-water'
   } else if (currentUrl.includes('rejlers')) {
     companyName = 'Rejlers'
+    companyUrl = 'https://www.rejlers.com/'
+    companyIcon = 'fas fa-rocket'
   } 
 
   // 2. Hitta ALLA element med klassen "company-name"
   const nameElements = document.querySelectorAll('.company-name')
   // 3. Loopa igenom dem och byt ut texten i varje
   nameElements.forEach(el => el.textContent = companyName)
+
+
+  // Uppdatera länken och ikonen i footern
+  const linkElement = document.querySelector('.dynamic-link')
+  if (linkElement) {
+    linkElement.hrfef = companyUrl
+  }
+
+  const iconElement = document.querySelector('.dynamic-icon')
+  if (iconElement) {
+    iconElement.className = companyIcon // Uppdatera ikonklassen
+  }
+
 
 
   // Initialisera temainställningar
